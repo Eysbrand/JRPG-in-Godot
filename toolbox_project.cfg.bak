@@ -1,0 +1,120 @@
+
+
+[debug]
+; Global switch for debug mode
+IS_DEBUG = false
+
+; Deletes all save files on start
+REMOVE_ALL_SAVES = false
+
+; Whether levels must be unlocked
+UNLOCK_ALL_LEVELS = true
+
+; Global switch for debug logs
+SHOW_LOG = true
+
+; All LogCategories are shown by default. Add true to this Dictionary to
+; prevent showing  Logs of this LogCategory
+HIDE_LOG_CATEGORY = {
+;	D.LogCategory.PLAYER : true,
+}
+
+; All LogLevels are shown by default. Add true to this Dictionary to
+; prevent showing Logs of this LogLevel
+HIDE_LOG_LEVEL = {
+;	D.LogLevel.INFO : true
+}
+
+
+[menu]
+; show ScreenMainMenu after ScreenSplash or directly start ScreenGame
+SHOW_MAIN_MENU = false
+
+; show ScreenLevelMenu on game start or directly start ScreenGame
+SHOW_LEVEL_MENU = false
+
+; show the settings button in ScreenMainMenu
+SHOW_SETTINGS = true
+
+; show video settings in ScreenOptionsMenu
+SHOW_SETTINGS_VIDEO = true
+
+; show audio settings in ScreenOptionsMenu
+SHOW_SETTINGS_AUDIO = true
+
+; show control settings in ScreenOptionsMenu
+SHOW_SETTINGS_KEYBINDINGS = true
+
+[sounds]
+; path to song played in menus
+TITLE_SONG = "res://assets/sound/music/28 Towering Blues.ogg"
+
+; if level does not define own soundtrack
+DEFAULT_LEVEL_SONG = "res://assets/sound/music/03 Before the Dawn.ogg"
+
+; played during GameDialogs
+DIALOG_PAUSE_SONG = "res://assets/sound/music/27 Coffee Break.ogg"
+DIALOG_WON_SONG = "res://assets/sound/sfx/16687__littlerobotsoundfactory__fantasy-sound-effects-library/270402__littlerobotsoundfactory__jingle-win-00.wav"
+DIALOG_LOST_SONG = "res://assets/sound/sfx/16687__littlerobotsoundfactory__fantasy-sound-effects-library/270403__littlerobotsoundfactory__jingle-lose-00.wav"
+
+; Button sound effects
+UI_SELECT = "res://assets/sound/sfx/16687__littlerobotsoundfactory__fantasy-sound-effects-library/270401__littlerobotsoundfactory__menu-select-00.wav"
+UI_BACK = "res://assets/sound/sfx/16687__littlerobotsoundfactory__fantasy-sound-effects-library/270393__littlerobotsoundfactory__inventory-open-00.wav"
+
+
+[game]
+; skip GameDialogLost and directly restart level on player death
+DIRECT_RESPAWN_ON_LEVEL_LOST = false
+
+; skip GameDialogWon and directly start next level
+DIRECT_NEXT_ON_LEVEL_WON = false
+
+USE_MOBILE_CONTROLS = false
+
+; specify levels if your game uses them.
+; you can either give the path to a scene or some other info to create a level.
+; access it via C.LEVELS[level_id]
+[LEVELS]
+00="res://game/levels/Level_0.tscn"
+01="res://game/levels/Level_0_BG.tscn"
+02="res://game/levels/Level_1.tscn"
+03="res://game/levels/PlatformerDarkCave.tscn"
+04="res://game/levels/TopDownDungeonMystery.tscn"
+05="res://game/levels/PlatformerParallax.tscn"
+06="res://game/levels/TopDownGridLevel2.tscn"
+07="res://game/levels/BrownHouse.tscn"
+08="res://game/levels/BrownHouse1.tscn"
+09="res://game/levels/OverWorld.tscn"
+10="res://game/levels/TopDownGridLevel.tscn"
+11="res://game/levels/TopDownIsometric.tscn"
+12="res://game/levels/PlatformerAutotile.tscn"
+13="res://game/levels/Level_Neighbour.tscn"
+14="res://game/levels/Level_Merchant.tscn"
+15="res://game/levels/Level_Cave.tscn"
+
+
+[options]
+DEFAULT_OPTIONS_AUDIO = {
+	"Master" : 00,
+	"Music" : 100,
+	"Effects" : 100
+}
+
+DEFAULT_OPTIONS_VIDEO = {
+	"Fullscreen" : false,
+	"VSync" : true
+}
+
+
+[screen]
+SCREEN_SPLASH = "res://screens/ScreenSplash.tscn"
+SCREEN_MAIN_MENU = "res://screens/ScreenMainMenu.tscn"
+SCREEN_ABOUT = "res://screens/ScreenAbout.tscn"
+
+SCREEN_OPTIONS_MENU = "res://screens/ScreenOptionsMenu.tscn"
+SCREEN_OPTIONS_VIDEO_MENU = "res://screens/ScreenOptionsVideoMenu.tscn"
+SCREEN_OPTIONS_AUDIO_MENU = "res://screens/ScreenOptionsAudioMenu.tscn"
+SCREEN_OPTIONS_CONTROLS_MENU = "res://screens/ScreenOptionsControlsMenu.tscn"
+
+SCREEN_GAME = "res://screens/ScreenGame.tscn"
+SCREEN_LEVEL_MENU = "res://screens/ScreenLevelMenu.tscn"
